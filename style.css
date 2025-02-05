@@ -12,6 +12,7 @@ html {
     background-color: black;
     overscroll-behavior: none;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
     letter-spacing: 2.5px;
     color: white;
     background-color: black;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .object {
@@ -35,7 +36,7 @@ textarea {
     flex: 1;
     height: 200px;
     padding: 2.5px;
-    font-size: 16px;
+    font-size: 1rem;
     resize: none;
     font-weight: normal;
     font-style: normal;
@@ -66,11 +67,11 @@ textarea {
 
 .text {
     margin-left: 200px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 p {
-    font-size: 16px; 
+    font-size: 1rem;
 }
 
 ul {
