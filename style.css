@@ -1,0 +1,45 @@
+html {
+    background-color: black;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Galactico';
+    src: url('galactico.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2.5px;
+    color: white;
+    background-color: black;
+}
+
+.sidebar {
+    width: 175px;
+    height: 555vh;
+    color: white;
+    position: fixed;
+    left: 15px;
+    top: 0;
+    border-right: 2.5px solid white;
+}
+
+.text {
+    margin-left: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: none;
+    }
+}
