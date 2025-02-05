@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Galactico';
+    src: url('/fonts/galactico.eot');
+    src: url('/fonts/galactico.eot') format('embedded-opentype'),
+        url('/fonts/galactico.woff2') format('woff2'),
+        url('/fonts/galactico.woff') format('woff'),
+        url('/fonts/galactico.ttf') format('truetype'),
+        url('/fonts/galactico.svg#GalacticoBasic') format('svg');
+}
+
 html {
     background-color: black;
     overscroll-behavior: none;
@@ -6,12 +16,41 @@ html {
 
 body {
     font-family: 'Galactico';
-    src: url('galactico.otf') format('otf');
     font-weight: normal;
     font-style: normal;
     letter-spacing: 2.5px;
     color: white;
     background-color: black;
+    font-size: 16px;
+}
+
+.object {
+    display: flex;
+    width: 100vw;
+    gap: 12.5px;
+}
+
+textarea {
+    font-family: 'Galactico';
+    flex: 1;
+    height: 200px;
+    padding: 2.5px;
+    font-size: 16px;
+    resize: none;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2.5px;
+    color: white;
+    background-color: black;
+    margin-left: 197.5px;
+    margin-top: -2.5px;
+    border: none;
+    outline: 2.5px solid white;
+}
+
+.output {
+    margin-left: 2px;
+    margin-right: 20px;
 }
 
 .sidebar {
@@ -22,6 +61,7 @@ body {
     left: 15px;
     top: 0;
     border-right: 2.5px solid white;
+    font-size: 16px;
 }
 
 .text {
