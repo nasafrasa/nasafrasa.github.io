@@ -1,6 +1,7 @@
 const filename = window.location.pathname.split("/").pop();
 
 document.addEventListener("DOMContentLoaded", () => {
+    console.log(filename)
     if (filename.includes("index")) {
         fetch("https://nasafrasa.github.io/directories/indexsidebar.html")
         .then(response => response.text())
