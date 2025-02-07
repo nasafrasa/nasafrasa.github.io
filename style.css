@@ -1,25 +1,28 @@
 @font-face {
-    font-family: 'Galactico';
-    src: url('/fonts/galactico.eot');
-    src: url('/fonts/galactico.eot') format('embedded-opentype'),
-        url('/fonts/galactico.woff2') format('woff2'),
-        url('/fonts/galactico.woff') format('woff'),
-        url('/fonts/galactico.ttf') format('truetype'),
-        url('/fonts/galactico.svg#GalacticoBasic') format('svg');
+    font-family: 'Hypernovae Relics';
+    src: url('fonts/Hypernovae Relics.woff2') format('woff2'),
+         url('fonts/Hypernovae Relics.woff') format('woff'),
+         url('fonts/Hypernovae Relics.ttf') format('truetype'),
+         url('fonts/Hypernovae Relics.otf') format('opentype'),
+         url('/fonts/Hypernovae Relics.svg#HypernovaeRelics') format('svg'),
+         url('/fonts/Hypernovae Relics.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
     background-color: black;
     overscroll-behavior: none;
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: 22px;
+    line-height: 17.5px;
 }
 
 body {
-    font-family: 'Galactico';
+    font-family: 'Hypernovae Relics', sans-serif;
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 2.5px;
+    letter-spacing: 0px;
     color: white;
     background-color: black;
     font-size: 1rem;
@@ -29,11 +32,11 @@ body {
 .object {
     display: flex;
     width: 100vw;
-    gap: 12.5px;
+    gap: 15px;
 }
 
 textarea {
-    font-family: 'Galactico';
+    font-family: 'Hypernovae Relics', sans-serif;
     flex: 1;
     height: 200px;
     padding: 2.5px;
@@ -41,18 +44,37 @@ textarea {
     resize: none;
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 2.5px;
+    letter-spacing: 0px;
     color: white;
     background-color: black;
-    margin-left: 197.5px;
-    margin-top: -2.5px;
+    margin-left: 205px;
+    margin-top: -8px;
     border: none;
     outline: 2.5px solid white;
+    line-height: 17.5px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 2.5px; 
+}
+
+textarea::-webkit-scrollbar-track {
+    background: black; /* Track color */
+    border-radius: 0px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: white; /* Scrollbar handle color */
+    border-radius: 0px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: white; /* Scrollbar handle on hover */
 }
 
 .output {
     margin-left: 2px;
-    margin-right: 20px;
+    margin-right: 22.5px;
 }
 
 .sidebar {
@@ -60,14 +82,14 @@ textarea {
     height: 555vh;
     color: white;
     position: fixed;
-    left: 15px;
+    left: 20px;
     top: 0;
     border-right: 2.5px solid white;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .text {
-    margin-left: 200px;
+    margin-left: 207.5px;
     font-size: 1rem;
 }
 
