@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
         img.src = imageFolder + image[0];
         img.loading = "lazy"
+        img.className = "skeleton"
+        img.onload = "this.previousElementSibling.style.display='none'"
         gallery.appendChild(img);
     });
 })
