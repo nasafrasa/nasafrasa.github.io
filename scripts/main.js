@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imageList.forEach(image => {
         const img = document.createElement("img");
         img.src = imageFolder + image[0];
+        img.loading = "lazy"
         gallery.appendChild(img);
     });
 })
