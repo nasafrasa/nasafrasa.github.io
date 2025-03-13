@@ -1,0 +1,20 @@
+html {
+    background-color: black;
+    overscroll-behavior: none;
+    font-family: 'Hypernovae Relics';
+}
+
+.sidebar {
+    flex: content;
+}
+
+@font-face {
+    font-family: 'Hypernovae Relics';
+    src: url('fonts/Hypernovae Relics.woff2') format('woff2'),
+        url('fonts/Hypernovae Relics.ttf') format('truetype'),
+        url('fonts/Hypernovae Relics.otf') format('opentype'),
+        url('/fonts/Hypernovae Relics.svg#HypernovaeRelics') format('svg'),
+        url('/fonts/Hypernovae Relics.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

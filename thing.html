@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⠀</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul class="directories">
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="identity.html">Identity</li>
+            <li> </li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="text.html">Text</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="unknown.html">Unknown</a></li>
+            <li> </li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </div>
+    <p class="text">
+        TEXT AND STARS TRANSLATOR
+    </p>
+    <div class="object">
+        <textarea id="englishText" placeholder="TEXT"></textarea>
+        <textarea id="customText" placeholder="ᕀㅤ₊ₒᕀ" class="output"></textarea>
+        <script>
+            // ----- ە
+            const alphabet = {
+                'A': '₊', 'B': '∴', 'C': '⋄', 'D': '°', 'E': '⠀', 'F': '⋱',
+                'G': '⦙', 'H': '⋮', 'I': '⁎', 'J': '⟡', 'K': '✷', 'L': '𝄈',
+                'M': '⚬', 'N': '⁺', 'O': '⋅', 'P': '⟢', 'Q': '⋆', 'R': 'ₒ',
+                'S': 'ᕀ', 'T': 'ㅤ', 'U': '˳', 'V': '★', 'W': '⋰', 'X': '⁕',
+                'Y': '∵', 'Z': '●',
+
+                '!': '✧', '?': '✦',
+
+                '0': 'ᨔ', '1': '⦁', '2': '｡', '3': '⬩', '4': '⟣', '5': '⬫',
+                '6': '‥', '7': '⋯', '8': '⁖', '9': '፨',
+
+                ',': '˚', '.': '✶', "{": '✹', '}': '✸', '*': '⭒', '`': '*',
+                '+': '✵', '-': '✯', '[': '✮', ']': '✬', '(': '✭', ')': '✫',
+                '/': '☆', '<': '❂', '>': '⍟', '': '✩', '@': '༌', '$': 'ᐝ', '&': '܁',
+                '%': '․', '^': 'ॱ', '#': '·', '_': '·', '|': '∙', '~': '.'
+            };
+
+            const reverseAlphabet = Object.fromEntries(
+                Object.entries(alphabet).map(([key, value]) => [value, key])
+            );
+
+            const englishText = document.getElementById('englishText');
+            const customText = document.getElementById('customText');
+
+            function translateToCustom(text) {
+                return Array.from(text).map(char => {
+                    const upperChar = char.toUpperCase();
+                    return alphabet[upperChar] || char;
+                }).join('');
+            }
+
+            function translateToEnglish(text) {
+                return Array.from(text).map(char => reverseAlphabet[char] || char).join('');
+            }
+
+            englishText.addEventListener('input', () => {
+                const input = englishText.value;
+                customText.value = translateToCustom(input);
+            });
+
+            customText.addEventListener('input', () => {
+                const input = customText.value;
+                englishText.value = translateToEnglish(input);
+            });
+        </script>
+    </div>
+</body>
+
+</html>
